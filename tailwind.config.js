@@ -21,20 +21,20 @@ module.exports = {
                 'g-image--loaded',
                 'active',
             ],
-        }
+        },
     },
     theme: {
         extend: {
             spacing: {
-                '80': '20rem',
-                '108': '27rem',
+                80: '20rem',
+                108: '27rem',
             },
             borderWidth: {
-                '14': '14px',
-            }
+                14: '14px',
+            },
         },
         container: {
-            padding: '1rem'
+            padding: '1rem',
         },
         colors: {
             background: {
@@ -99,7 +99,13 @@ module.exports = {
                 '"Segoe UI Symbol"',
                 '"Noto Color Emoji"',
             ],
-            serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+            serif: [
+                'Georgia',
+                'Cambria',
+                '"Times New Roman"',
+                'Times',
+                'serif',
+            ],
             mono: [
                 'Menlo',
                 'Monaco',
@@ -115,5 +121,5 @@ module.exports = {
     },
     plugins: [
         // Some useful comment
-    ]
+    ],
 }

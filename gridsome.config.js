@@ -6,7 +6,8 @@
 
 module.exports = {
     siteName: 'Gridsome Blog Starter',
-
+    siteDescription: 'A simple theme for Gridsome powered by Tailwind CSS v2',
+    siteUrl: 'https://gridsome-blog-filip.netlify.app/',
     plugins: [
         {
             use: 'gridsome-plugin-tailwindcss',
@@ -19,9 +20,12 @@ module.exports = {
                 pathPrefix: '/docs', // Add route prefix. Optional
                 template: './src/templates/Documentation.vue', // Optional
                 plugins: [
-                    ['gridsome-plugin-remark-shiki', {theme: 'Material-Theme-Palenight', skipInline: true}]
+                    [
+                        'gridsome-plugin-remark-shiki',
+                        { theme: 'Material-Theme-Palenight', skipInline: true },
+                    ],
                 ],
-            }
+            },
         },
         {
             use: '@gridsome/source-filesystem',
@@ -32,22 +36,22 @@ module.exports = {
                 refs: {
                     tags: {
                         typeName: 'Tag',
-                        create: true
-                    }
+                        create: true,
+                    },
                 },
                 remark: {
                     plugins: [
                         // ...local plugins
-                    ]
-                }
-            }
+                    ],
+                },
+            },
         },
         {
             use: `gridsome-plugin-netlify-cms`,
             options: {
                 publicPath: `/admin`,
-                modulePath: `src/admin/index.js`
-            }
+                modulePath: `src/admin/index.js`,
+            },
         },
 
         {
@@ -57,32 +61,32 @@ module.exports = {
                 feedOptions: {
                     title: 'Gridsome Starter Blog',
                     feed_url: 'https://gridsome-blog-filip.netlify.app/rss.xml',
-                    site_url: 'https://gridsome-blog-filip.netlify.app/'
+                    site_url: 'https://gridsome-blog-filip.netlify.app/',
                 },
-                feedItemOptions: node => ({
+                feedItemOptions: (node) => ({
                     title: node.title,
                     description: node.summary,
                     url: 'https://gridsome-blog-filip.netlify.app' + node.path,
                     author: 'Filip Vanden Eynde',
-                    date: node.date
+                    date: node.date,
                 }),
                 output: {
                     dir: './static',
-                    name: 'rss.xml'
-                }
-            }
+                    name: 'rss.xml',
+                },
+            },
         },
         {
             use: '@gridsome/plugin-sitemap',
             options: {
                 cacheTime: 600000, // default
-            }
+            },
         },
     ],
 
     templates: {
         Tag: '/tag/:id',
-        Post: "/blog/post/:title",
+        Post: '/blog/post/:title',
     },
 
     transformers: {
@@ -92,8 +96,11 @@ module.exports = {
             anchorClassName: 'icon icon-link',
             plugins: [
                 // ...global plugins
-                [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
-            ]
-        }
+                [
+                    'gridsome-plugin-remark-shiki',
+                    { theme: 'Material-Theme-Palenight', skipInline: true },
+                ],
+            ],
+        },
     },
 }

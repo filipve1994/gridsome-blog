@@ -1,21 +1,19 @@
 <template>
-  <Layout>
-    <div class="container-inner mx-auto py-16">
-      <h2 class="text-4xl font-bold mb-16">Page Not Found</h2>
-      <g-image src="../../static/404.svg" alt="404 page not found"/>
-    </div>
-  </Layout>
+    <Layout>
+        <div class="container-inner mx-auto py-16">
+            <h2 class="text-4xl font-bold mb-16">Page Not Found</h2>
+            <g-image src="../../static/404.svg" alt="404 page not found" />
+        </div>
+    </Layout>
 </template>
 
 <script>
 export default {
-  name: "404",
-  metaInfo: {
-    title: 'Page Not Found'
-  }
+    name: '404',
+    metaInfo: {
+        title: 'Page Not Found',
+    },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
