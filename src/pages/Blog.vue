@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import BlogPostList from '~/components/BlogPostList.vue'
+import BlogPostList from '~/components/blog/BlogPostList.vue'
 import PaginationPosts from '../components/PaginationPosts'
 
 export default {
@@ -74,6 +74,15 @@ query Posts($page: Int) {
                 summary
                 timeToRead
                 path
+                feature {
+                    image(width: 400)
+                    alt
+                }
+                categories {
+                    id
+                    title
+                    path
+                }
             }
         }
     }

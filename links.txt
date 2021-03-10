@@ -4,3 +4,27 @@
 -
 -
 -
+
+
+https://garywoodfine.com/gridsome-more-adventures-with-the-static-website-generator/
+https://garywoodfine.com/gridsome-using-file-system-markdown-files/
+https://garywoodfine.com/gridsome-configuring-custom-tailwindcss/
+https://garywoodfine.com/gridsome-configure-basic-on-page-seo/
+https://garywoodfine.com/gridsome-implement-additional-seo/
+
+
+
+//todo
+
+https://garywoodfine.com/gridsome-more-adventures-with-the-static-website-generator/
+https://garywoodfine.com/gridsome-using-file-system-markdown-files/
+https://garywoodfine.com/gridsome-configure-basic-on-page-seo/
+https://garywoodfine.com/gridsome-adding-feature-image-to-blog-posts/
+
+
+
+Last version with gridsome:
+https://github.com/Geek-I-Am/website/tree/5d5e5b8e70a4c11c0289023afeb55d680f5b42f3
+
+
+

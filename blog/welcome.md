@@ -1,6 +1,7 @@
 ---
 title: "Welcome"
 date: 2020-07-10
+author: Filip Vanden Eynde
 ---
 
 # Welcome

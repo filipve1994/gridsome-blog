@@ -1,6 +1,7 @@
 ---
 title: "This is my first post"
 date: 2020-07-14
+author: Filip Vanden Eynde
 ---
 
 # This is header

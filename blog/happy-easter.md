@@ -1,6 +1,7 @@
 ---
 title: 'Happy Easter'
 date: 2020-04-12
+author: Filip Vanden Eynde
 ---
 
 ## Happy Easter

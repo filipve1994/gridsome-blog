@@ -8,6 +8,15 @@ module.exports = {
     siteName: 'Gridsome Blog Starter',
     siteDescription: 'A simple theme for Gridsome powered by Tailwind CSS v2',
     siteUrl: 'https://gridsome-blog-filip.netlify.app/',
+    titleTemplate: `%s | Gridsome Blog Starter`,
+    icon: 'src/favicon.png',
+
+    keywords:
+        'Gridsome,Vue,Tailwind,Tailwind CSS,JavaScript,HTML,CSS,Vue.js,VueJS',
+    author: 'Filip Vanden Eynde',
+    // image: 'uploads/version-control.png',
+    image: 'src/favicon.png',
+
     plugins: [
         {
             use: 'gridsome-plugin-tailwindcss',
@@ -38,12 +47,27 @@ module.exports = {
                         typeName: 'Tag',
                         create: true,
                     },
+                    authors: {
+                        typeName: 'Authors',
+                    },
+                    categories: {
+                        typeName: 'Category',
+                        create: true,
+                    },
                 },
                 remark: {
                     plugins: [
                         // ...local plugins
                     ],
                 },
+            },
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: 'static/authors/*.md',
+                typeName: 'Authors',
+                create: true,
             },
         },
         {
@@ -58,8 +82,11 @@ module.exports = {
             use: 'gridsome-plugin-rss',
             options: {
                 contentTypeName: 'Post',
+                latest: true,
+                maxItems: 1000,
                 feedOptions: {
                     title: 'Gridsome Starter Blog',
+                    description: '',
                     feed_url: 'https://gridsome-blog-filip.netlify.app/rss.xml',
                     site_url: 'https://gridsome-blog-filip.netlify.app/',
                 },
@@ -67,7 +94,7 @@ module.exports = {
                     title: node.title,
                     description: node.summary,
                     url: 'https://gridsome-blog-filip.netlify.app' + node.path,
-                    author: 'Filip Vanden Eynde',
+                    author: node.author,
                     date: node.date,
                 }),
                 output: {
@@ -87,6 +114,13 @@ module.exports = {
     templates: {
         Tag: '/tag/:id',
         Post: '/blog/post/:title',
+        Authors: [
+            {
+                path: '/author/:title',
+                component: './src/templates/Author.vue',
+            },
+        ],
+        Category: '/category/:id',
     },
 
     transformers: {
