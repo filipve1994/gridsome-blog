@@ -40,22 +40,38 @@
 </template>
 
 <script>
-// import UserService from '@/services/github/userService'
+ import UserService from '@/services/github/userService'
 export default {
     name: 'Author',
     data() {
         return {
             author_detail: {
-                avatar: '',
-                fullName: '',
+                avatar: 'https://avatars.githubusercontent.com/u/47209284?v=4',
+                //avatar: response.avatar_url,
+                fullName: 'Filip Vanden Eynde',
+                //fullName: response.name,
                 biography: '',
+                //biography: response.bio,
+                profile_url: 'https://github.com/filipve1994',
+                //profile_url: response.html_url,
+                followers: 7,
+                //followers: response.followers,
+                repositories: 42,
+                //repositories: response.public_repos,
+                location: '',
+                //location: response.location,
+                blog_link: '',
+                //blog_link: response.blog,
+                twitter_username: '',
+                //twitter_username: response.twitter_username,
             },
         }
     },
     async created() {
-        // let service = new UserService()
-        // let user = this.$page.authors.title
-        // this.author_detail = await service.getUserDetail(user)
+        let service = new UserService()
+        let user = this.$page.authors.title
+        console.log('user : ' + user);
+        this.author_detail = await service.getUserDetail(user);
     },
     methods: {
         imageLoadError(e) {

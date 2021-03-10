@@ -56,8 +56,16 @@
                         {{ tag.title }}
                     </g-link>
                 </div>
-                <author :author="$page.post.author" />
+
+
             </footer>
+
+            <author
+                v-if="author_detail"
+                :author="$page.post.author"
+                :details="author_detail"
+            />
+
         </div>
     </Layout>
 </template>
@@ -101,6 +109,8 @@ query Post($path: String!) {
         summary
         timeToRead
         author
+        githubauthor
+
         cardImage {
             image(width: 400)
             alt
@@ -131,6 +141,7 @@ query {
 <script>
 import Author from '../components/blog/Author'
 import { slugify } from 'gridsome'
+import UserService from '@/services/github/userService'
 
 export default {
     name: 'Post',
@@ -140,7 +151,26 @@ export default {
     },
     data() {
         return {
-            author_detail: {},
+            author_detail: {
+                avatar: 'https://avatars.githubusercontent.com/u/47209284?v=4',
+                //avatar: response.avatar_url,
+                fullName: 'Filip Vanden Eynde',
+                //fullName: response.name,
+                biography: '',
+                //biography: response.bio,
+                profile_url: 'https://github.com/filipve1994',
+                //profile_url: response.html_url,
+                followers: 7,
+                //followers: response.followers,
+                repositories: 42,
+                //repositories: response.public_repos,
+                location: '',
+                //location: response.location,
+                blog_link: '',
+                //blog_link: response.blog,
+                twitter_username: '',
+                //twitter_username: response.twitter_username,
+            },
         }
     },
     metaInfo() {
@@ -205,6 +235,12 @@ export default {
                 { src: 'https://platform.twitter.com/widgets.js', async: true },
             ],
         }
+    },
+    async created() {
+        let service = new UserService()
+        console.log('page post author: ' + this.$page.post.author)
+        console.log('page post authorgithub: ' + this.$page.post.githubauthor)
+        this.author_detail = await service.getUserDetail(this.$page.post.githubauthor)
     },
     computed: {
         postUrl() {

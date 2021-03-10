@@ -15,6 +15,7 @@ cardImage:
     image: /uploads/twitter/git/how-to-automate-git-ignore.jpg
     alt: how to configure a global gitignore file
 author: Filip Vanden Eynde
+githubauthor: filipve1994
 tags: ['design', 'frontend']
 categories: 
     - writing

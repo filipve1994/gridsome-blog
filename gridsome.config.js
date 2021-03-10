@@ -14,6 +14,7 @@ module.exports = {
     keywords:
         'Gridsome,Vue,Tailwind,Tailwind CSS,JavaScript,HTML,CSS,Vue.js,VueJS',
     author: 'Filip Vanden Eynde',
+    githubauthor: 'filipve1994',
     // image: 'uploads/version-control.png',
     image: 'src/favicon.png',
 

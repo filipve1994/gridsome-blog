@@ -2,9 +2,21 @@
 title: Top 5 Static Site Generators in Vue
 path: /top-5-static-site-generators-in-vue
 date: 2019-04-03
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rerum earum quos explicabo suscipit maxime iste qui nihil. Reiciendis asperiores minus necessitatibus
 summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rerum earum quos explicabo suscipit maxime iste qui nihil. Reiciendis asperiores minus necessitatibus
 tags: ['frontend', 'coding', 'vue']
 author: Filip Vanden Eynde
+githubauthor: filipve1994
+keywords:
+    - keyword 1
+    - keyword 2
+    - design for developers
+feature:
+    image: /uploads/posts/git/git-tutorials.svg
+    alt: how to configure a global gitignore file
+cardImage:
+    image: /uploads/twitter/git/how-to-automate-git-ignore.jpg
+    alt: how to configure a global gitignore file
 ---
 
 ![background](./images/blog_bg_3.jpg)

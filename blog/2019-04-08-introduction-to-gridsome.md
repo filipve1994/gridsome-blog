@@ -2,9 +2,24 @@
 title: Introduction to Gridsome
 path: /introduction-to-gridsome
 date: 2019-04-08
+description: Gridsome is a Vue.js-powered, modern site generator for building the fastest possible websites for any Headless CMS, APIs or Markdown-files. Gridsome makes it easy and fun for developers to create fast, beautiful websites without needing to become a performance expert.
 summary: Gridsome is a Vue.js-powered, modern site generator for building the fastest possible websites for any Headless CMS, APIs or Markdown-files. Gridsome makes it easy and fun for developers to create fast, beautiful websites without needing to become a performance expert.
+keywords:
+    - keyword 1
+    - keyword 2
+    - design for developers
+feature:
+    image: /uploads/posts/git/git-tutorials.svg
+    alt: how to configure a global gitignore file
+cardImage:
+    image: /uploads/twitter/git/how-to-automate-git-ignore.jpg
+    alt: how to configure a global gitignore file
 tags: ['frontend', 'coding', 'vue']
 author: Filip Vanden Eynde
+githubauthor: filipve1994
+categories: 
+    - writing
+    - coding
 ---
 
 ![background](./images/blog_bg_1.jpg)
